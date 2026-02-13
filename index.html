@@ -1,0 +1,59 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+  <title>Sigil Weaver</title>
+
+  <meta name="description" content="Sigil Weaver is a quiet tool for distilling intention into symbol. Weave personal glyphs through word and shape." />
+
+  <meta property="og:title" content="Sigil Weaver" />
+  <meta property="og:description" content="A quiet ritual tool for generating intention-based sigils." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="sigilweaver.css" />
+</head>
+
+<body>
+  <main>
+    <h1>Sigil Weaver</h1>
+    <p id="prompt">What intention would you like to hold?</p>
+
+    <div id="inputArea">
+      <input
+        id="wordInput"
+        type="text"
+        maxlength="24"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="one word …"
+        aria-label="Intention word"
+      />
+      <button id="weaveBtn" type="button">Weave sigil</button>
+    </div>
+
+    <section id="sigilCard" class="hidden" aria-live="polite">
+      <div id="sigilContainer"></div>
+      <p id="sigilName" class="sigil-name"></p>
+      <p id="sigilIncantation" class="sigil-incantation"></p>
+
+      <button id="downloadBtn" type="button">Download card</button>
+      <p id="cooldownNote" class="cooldown-note">You can weave another sigil tomorrow.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="footer-link" href="https://github.com/deadquiet42/sigil-weaver" target="_blank" rel="noopener">
+      source
+    </a>
+  </footer>
+
+  <script src="sigilweaver.js"></script>
+</body>
+</html>

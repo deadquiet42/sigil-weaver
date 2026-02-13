@@ -1,0 +1,155 @@
+/* sigilweaver.css */
+
+:root {
+  --bronze: #c79c65;
+  --bronze-light: #e8caa0;
+  --bg: #111;
+  --bg2: #1a1a1a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 120px 20px 60px;
+  background: var(--bg) radial-gradient(ellipse at center, var(--bg2) 0%, var(--bg) 100%) fixed;
+  color: var(--bronze-light);
+
+  font-family: "Crimson Pro", serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  max-width: 520px;
+}
+
+h1 {
+  font-size: 1.4em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  margin: 0 0 16px;
+}
+
+#prompt {
+  font-size: 1em;
+  opacity: 0.55;
+  margin: 0 0 28px;
+}
+
+#inputArea {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#wordInput {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: var(--bronze-light);
+  font-size: 0.95em;
+  min-width: 160px;
+  max-width: 240px;
+  text-align: center;
+  outline: none;
+}
+
+#weaveBtn,
+#downloadBtn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 10px 22px;
+  color: var(--bronze-light);
+  font-size: 0.9em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.35s ease, opacity 0.35s ease;
+}
+
+#weaveBtn:hover,
+#downloadBtn:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+#weaveBtn:disabled,
+#downloadBtn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+#sigilCard {
+  margin-top: 46px;
+  max-width: 420px;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+#sigilContainer svg {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 24px;
+  display: block;
+}
+
+.sigil-name {
+  font-size: 1em;
+  letter-spacing: 0.5px;
+  opacity: 0.88;
+  margin: 0 0 12px;
+}
+
+.sigil-incantation {
+  font-style: italic;
+  font-size: 0.95em;
+  opacity: 0.78;
+  white-space: pre-wrap;
+  margin: 0 0 26px;
+}
+
+.cooldown-note {
+  font-size: 0.85em;
+  opacity: 0.45;
+  margin: 26px 0 0;
+}
+
+.footer {
+  margin-top: 56px;
+  font-size: 0.85em;
+  opacity: 0.45;
+}
+
+.footer-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  padding-bottom: 2px;
+}
+
+.footer-link:hover {
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+}
+
+.fade-in {
+  animation: fadeIn 0.9s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
