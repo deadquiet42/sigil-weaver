@@ -13,4 +13,4 @@ Live:
 Elsewhere:
 - https://itsjeremy.art
 - https://offcut.neocities.org
-- https://tilde.town/~YOURNAME
+- https://tilde.town/~deadquiet
